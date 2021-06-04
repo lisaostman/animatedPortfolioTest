@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:700');
+  
+body{
+    margin: 0;
+    padding: 0;
+}
+/* blob animation */
+.container {
+    overflow: hidden;
+    background: 	#ffeead;
+    text-align: center;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.navBar {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    display: flex;
+    justify-self: end;
+    padding-right: 5%;
+}
+
+ul li {
+    display: inline;
+    text-align: center;
+    width: 33.3333%;
+
+  }
+
+ul li .h2 {
+    display: inline;
+    width: 33.333%;
+    text-decoration: none;
+    margin: 0;
+    /* font-size: 0.9em; */
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    color:white;
+    text-shadow: 1px 1px rgb(29, 29, 172);
+}
+
+#aboutLink {
+    color: #ff6f69;
+}
+
+#contactLink:hover {
+    color: #ffcc5c;
+}
+
+#projectsLink:hover {
+    color: #88d8b0;
+}
+  
+  hr {
+    height: .25rem;
+    width: 33.3333%;
+    margin: 0;
+    background: #ff6f69;
+    border: none;
+    transition: .3s ease-in-out;
+  }
+
+  .two:hover ~ hr {
+    margin-left: 33.3333%;
+    background-color: #ffcc5c;
+  }
+  
+  .three:hover ~ hr {
+    margin-left: 66.6666%;
+    background-color: #88d8b0;
+  }
+  
+  
+.titleName {
+    font-size: 4vw;
+    line-height: 1;
+    z-index: 1;
+    justify-self: center;
+    align-self: center;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    text-shadow: 2px 2px rgb(29, 29, 172);
+  }
+
+  .whiteText {
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    color: white;
+  }
+
+  /* .line {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    width: 5%;
+    background-color: #88d8b0;
+  } */
+
+  .blob {
+    fill: #ff6769;
+    width: 35vmax;
+    animation-name: blob;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-play-state: running; 
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  } 
+
+  @keyframes blob {
+    0%   { transform: scale(1)   translate(10px, -30px); }
+    38%  { transform: scale(0.8, 1) translate(80%, 30%) rotate(160deg); } 
+    40%  { transform: scale(0.8, 1) translate(80%, 30%) rotate(160deg); }
+    78%  { transform: scale(1.3) translate(0%, 50%) rotate(-20deg); }
+    80%  { transform: scale(1.3) translate(0%, 50%) rotate(-20deg); }
+    100% { transform: scale(1)   translate(10px, -30px); }
+  } 
