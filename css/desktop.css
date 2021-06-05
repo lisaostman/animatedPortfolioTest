@@ -11,6 +11,7 @@ a {
   text-decoration: none;
 }
 
+/* table for projects css */
 th {
   background-color: #96ceb4;
 }
@@ -38,7 +39,7 @@ th, td {
   display: none;
 }
 
-/* blob animation */
+/* main container */
 .container {
     overflow: hidden;
     background: 	#ffeead;
@@ -46,7 +47,7 @@ th, td {
     height: 400vh;
     display: grid;
     grid-template-columns: 2fr 2fr 1fr;
-    grid-template-rows: repeat(4, auto 1fr)
+    grid-template-rows: repeat(4, auto 1fr);
 }
 
 /* .firstRow {
@@ -241,12 +242,21 @@ th, td {
     padding-right: 5%;
 }
 
-ul li {
+.navBar ul li {
     display: inline;
     text-align: center;
     width: 33.3333%;
-
   }
+
+.stickyNav {
+  position:fixed;
+   bottom: 5px;
+   right: 5px;
+}
+
+.stickyNav ul {
+   list-style-type: none;
+}
 
 ul li .h2 {
     display: inline;
