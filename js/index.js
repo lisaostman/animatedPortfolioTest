@@ -1,9 +1,14 @@
 const fadingElements = document.querySelectorAll('.fade-in');
 const slidingElements = document.querySelectorAll('.slide-in');
+const navElements = document.querySelectorAll('.navBar');
 
 const options = {
     threshold: 0,
     rootMargin: '0px 0px -150px 0px'
+}
+
+const options2 = {
+    threshold: 0
 }
 
 const appearOnScroll = new IntersectionObserver(
@@ -16,8 +21,6 @@ const appearOnScroll = new IntersectionObserver(
                 return;
             }
             else {
-                console.log(entry.target);
-                console.log("hello!");
                 entry.target.classList.add('appear');
                 appearOnScroll.unobserve(entry.target);
             }
@@ -25,12 +28,35 @@ const appearOnScroll = new IntersectionObserver(
     }, 
 options)
 
+const appearAfterGone = new IntersectionObserver(
+    function (
+        entries,
+        appearAfterGone
+    ) {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+                console.log(entry.target);
+                console.log("goodbye!");
+                document.querySelector(".stickyNav").classList.add('notHidden');
+                appearOnScroll.unobserve(entry.target);
+            }
+            else {
+                return;
+            }
+        })
+    }, 
+options2)
+
 fadingElements.forEach(fading => {
     appearOnScroll.observe(fading);
 })
 
 slidingElements.forEach(slider => {
     appearOnScroll.observe(slider);
+})
+
+navElements.forEach(navig => {
+    appearAfterGone.observe(navig);
 })
 
 document.addEventListener("click", function (event) {

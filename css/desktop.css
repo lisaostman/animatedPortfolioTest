@@ -252,6 +252,7 @@ th, td {
   position:fixed;
    bottom: 5px;
    right: 5px;
+   display:none;
 }
 
 .stickyNav ul {
@@ -301,6 +302,9 @@ ul li .h2 {
     background-color: #88d8b0;
   }
   
+  .notHidden {
+    display: block;
+  }
   
 .titleName {
     font-size: 4vw;
