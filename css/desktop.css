@@ -12,18 +12,24 @@ body{
     text-align: center;
     height: 300vh;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 2fr 1fr;
     grid-template-rows: 1fr 1fr 2fr;
 }
 
-.firstRow {
+/* .firstRow {
   border: 6px green solid;
   grid-column: 1/4;
   grid-row: 1/2;
 }
 
+.lastCol {
+  border: 5px blue solid;
+  grid-column: 3/4;
+  grid-row: 1/2
+} */
+
 .firstSection {
-  border: 6px red solid;
+  /* border: 6px red solid; */
   grid-column: 1/4;
   grid-row: 3/4;
   align-self: center;
@@ -48,7 +54,7 @@ body{
 
 .aboutMeText, #aboutMeImg {
   transition: opacity 250ms ease-in,
-  transform 400ms ease-in;
+  transform 500ms ease-in;
 }
 
 .aboutMeText.appear, #aboutMeImg.appear {
@@ -168,14 +174,13 @@ ul li .h2 {
     grid-column: 3 / 4;
     grid-row: 2 / 4;
     background-color: blue;
-    justify-self: center;
-    width: 5px;
+    width: 2.5%;
+    margin-left: 7.5%;
   }
 
   .icon {
     grid-column: 3 / 4;
-    grid-row: 1 / 2;
-    align-self: end;
-    justify-self: center;
-    width: 15%;
+    grid-row: 2 / 4;
+    width: 20%;
+    z-index: 1;
   }
