@@ -9,7 +9,7 @@ body{
 .container {
     overflow: hidden;
     background: 	#ffeead;
-    text-align: center;
+    text-align: right;
     height: 400vh;
     display: grid;
     grid-template-columns: 2fr 2fr 1fr;
@@ -33,7 +33,21 @@ body{
   margin-right: -2.5%;
   /* align-self: center; */
   display: flex;
-  justify-content: space-between;
+  text-align: left;
+  /* justify-content: space-between; */
+}
+
+.sectionHeading {
+  font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 2vw;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 2px 2px #ffffff;
+    color: #ff6f69;
+}
+
+.sectionPara {
+  font-family: 'Poppins', sans-serif;
 }
 
 /* first section */
@@ -49,6 +63,7 @@ body{
   width: 100px;
   justify-self: end;
   margin-right: -3.5%;
+  width: 50px;
   /* align-self: center; */
 }
 
@@ -98,11 +113,11 @@ ul li .h2 {
     color: #ff6f69;
 }
 
-#contactLink:hover {
+.contactLink:hover {
     color: #ffcc5c;
 }
 
-#projectsLink:hover {
+.projectsLink:hover {
     color: #88d8b0;
 }
   
@@ -130,12 +145,28 @@ ul li .h2 {
     font-size: 4vw;
     line-height: 1;
     z-index: 1;
-    justify-self: center;
+    /* justify-self: center; */
     align-self: center;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     text-shadow: 2px 2px rgb(29, 29, 172);
   }
+
+.secondTitle {
+  margin-top: 25%;
+  /* justify-self: center; */
+  text-align: right;
+    align-self: center;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    z-index: 2;
+    text-shadow: 2px 2px rgb(29, 29, 172);
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 2vw;
+    font-family: 'Poppins', sans-serif;
+    color: #ffeead
+}
 
   .whiteText {
     font-weight: bold;
@@ -161,9 +192,9 @@ ul li .h2 {
   /* animations */
 .sectionText {
   flex-basis: 70%;
-  border: green 1px solid;
   transform: translateX(50%);
   opacity: 0;
+  margin-left: 5%;
 }
 
 .sectionText.appear, .sectionImg.appear {
