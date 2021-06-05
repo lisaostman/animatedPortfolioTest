@@ -3,16 +3,66 @@
 body{
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 /* blob animation */
 .container {
     overflow: hidden;
     background: 	#ffeead;
     text-align: center;
-    height: 100vh;
+    height: 300vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 2fr;
+}
+
+.firstRow {
+  border: 6px green solid;
+  grid-column: 1/4;
+  grid-row: 1/2;
+}
+
+.firstSection {
+  border: 6px red solid;
+  grid-column: 1/4;
+  grid-row: 3/4;
+  align-self: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+#aboutMeImg {
+  flex-basis: 30%;
+  height: 200px;
+  max-width: 100%;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+
+.aboutMeText {
+  flex-basis: 70%;
+  border: green 1px solid;
+  transform: translateX(50%);
+  opacity: 0;
+}
+
+.aboutMeText, #aboutMeImg {
+  transition: opacity 250ms ease-in,
+  transform 400ms ease-in;
+}
+
+.aboutMeText.appear, #aboutMeImg.appear {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 250ms ease-in;
+}
+
+.fade-in.appear {
+  opacity: 1;
 }
 
 .navBar {
@@ -93,18 +143,11 @@ ul li .h2 {
     color: white;
   }
 
-  /* .line {
-    grid-column: 3 / 4;
-    grid-row: 2 / 3;
-    width: 5%;
-    background-color: #88d8b0;
-  } */
-
   .blob {
     fill: #ff6769;
     width: 35vmax;
     animation-name: blob;
-    animation-duration: 10s;
+    animation-duration: 20s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
     animation-play-state: running; 
@@ -113,10 +156,26 @@ ul li .h2 {
   } 
 
   @keyframes blob {
-    0%   { transform: scale(1)   translate(10px, -30px); }
+    0%   { transform: scale(1)   translate(20px, -40px); }
     38%  { transform: scale(0.8, 1) translate(80%, 30%) rotate(160deg); } 
     40%  { transform: scale(0.8, 1) translate(80%, 30%) rotate(160deg); }
     78%  { transform: scale(1.3) translate(0%, 50%) rotate(-20deg); }
     80%  { transform: scale(1.3) translate(0%, 50%) rotate(-20deg); }
     100% { transform: scale(1)   translate(10px, -30px); }
   } 
+
+  #line {
+    grid-column: 3 / 4;
+    grid-row: 2 / 4;
+    background-color: blue;
+    justify-self: center;
+    width: 5px;
+  }
+
+  .icon {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    align-self: end;
+    justify-self: center;
+    width: 15%;
+  }
