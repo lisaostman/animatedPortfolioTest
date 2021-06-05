@@ -45,10 +45,12 @@ td {
   overflow: hidden;
   background: #ffeead;
   text-align: right;
-  height: 400vh;
+  height: auto;
+  /* height: 400vh; */
   display: grid;
   grid-template-columns: 2fr 2fr 1fr;
-  grid-template-rows: repeat(4, auto 1fr);
+   grid-template-rows: 50vh 50vh 1fr repeat(5, auto);
+  /* grid-template-rows: repeat(4, auto 1fr); */
 }
 
 /* .firstRow {
@@ -69,6 +71,10 @@ td {
   /* align-self: center; */
   text-align: left;
   /* justify-content: space-between; */
+}
+
+.newSection {
+  margin-bottom: 30%;
 }
 
 .sectionHeading {
@@ -235,7 +241,7 @@ td {
 
 /* nav */
 .navBar {
-  grid-column: 3 / 4;
+  grid-column: 1 / 4;
   grid-row: 1 / 2;
   display: flex;
   justify-self: end;
@@ -421,7 +427,7 @@ hr {
 
 .icon {
   grid-column: 3 / 4;
-  grid-row: 2 / 4;
+  grid-row: 2/ 4;
   width: 20%;
   z-index: 1;
   margin-top: -40%;
@@ -435,13 +441,13 @@ hr {
 }
 
 /* media queries */
-@media only screen and (max-width: 1406px) {
+/* @media only screen and (max-width: 1406px) {
   .navBar {
     grid-column: 3 / 4;
     grid-row: 1 / 2;
     /* display: flex;
   justify-self: end; */
-    padding-right: 5%;
+    /* padding-right: 5%;
   }
 
   .navBar ul li {
@@ -449,30 +455,28 @@ hr {
     text-align: center;
     width: 100%;
   }
-}
+} */
 
-@media only screen and (max-width: 876px) {
-
+@media only screen and (max-width: 1230px) {
   .container {
     grid-template-columns: 2fr 1fr 1fr 1fr;
-  grid-template-rows: repeat(5, auto);
-  height: auto;
+    grid-template-rows: repeat(5, auto);
+    /* height: auto; */
   }
 
-   .navBar {
-  grid-column: 1 / 4;
-  grid-row: 1 / 2;
-  display: flex;
-  justify-self: end;
-  padding-right: 5%;
-}
+  .navBar {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    display: flex;
+    justify-self: end;
+    padding-right: 5%;
+  }
 
-.navBar ul li {
-  display: inline;
-  text-align: center;
-  width: 33.3333%;
-}
-  
+  .navBar ul li {
+    display: inline;
+    text-align: center;
+    width: 33.3333%;
+  }
 
   .blob {
     display: none;
@@ -509,48 +513,48 @@ hr {
     grid-row: 4/5;
   }
 
-    .thirdSection {
+  .thirdSection {
     display: block;
     grid-column: 1/4;
     grid-row: 6/7;
   }
 
-
-  table, tbody {
-        display: block;
-        max-width: 100%;
-        font-size: 0.9em;
+  table,
+  tbody {
+    display: block;
+    max-width: 100%;
+    font-size: 0.9em;
   }
 
   th,
-  td, 
+  td,
   tr {
-  vertical-align: top;
-  max-width: 100%;
-}
+    vertical-align: top;
+    max-width: 100%;
+  }
 
-#line {
-  grid-column: 4 / 5;
-  grid-row: 2 / 7;
-  background-color: #88d8b0;
-  width: 2.5%;
-  margin-left: 8.5%;
-  margin-top: -25%;
-}
+  #line {
+    grid-column: 4 / 5;
+    grid-row: 2 / 7;
+    background-color: #88d8b0;
+    width: 2.5%;
+    margin-left: 8.5%;
+    margin-top: -25%;
+  }
 
-.icon {
-   grid-column: 4 / 5;
-  grid-row: 2 / 4;
-}
+  .icon {
+    grid-column: 4 / 5;
+    grid-row: 2 / 4;
+  }
 
-.iconBottom {
-   grid-column: 4 / 5;
-  grid-row: 7/8;
-}
+  .iconBottom {
+    grid-column: 4 / 5;
+    grid-row: 7/8;
+  }
 
   .sectionIcon,
   .sectionIcon2,
-  .sectionIcon3, 
+  .sectionIcon3,
   #notShowing {
     display: none;
   }
@@ -562,5 +566,6 @@ hr {
   .stickyNav {
     width: 20%;
     margin-right: 10px;
+    text-align: right;
   }
 }
