@@ -233,7 +233,7 @@ ul li .h2 {
 
 .sectionImg {
   flex-basis: 30%;
-  height: 200px;
+  height: auto;
   max-width: 100%;
   transform: translateX(-50%);
   opacity: 0;
