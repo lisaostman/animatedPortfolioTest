@@ -33,6 +33,17 @@ slidingElements.forEach(slider => {
     appearOnScroll.observe(slider);
 })
 
+document.addEventListener("click", function (event) {
+    console.log(event.target.id);
+    let elClicked = event.target.id;
+    let relatedText = document.querySelector("#" + elClicked + "Text");
+    if (relatedText.classList.contains("hidden")) {
+        relatedText.classList.remove("hidden");
+    } else {
+        relatedText.classList.add("hidden");
+    }
+})
+
 // const checkpoint = 1000;
  
 // window.addEventListener("scroll", () => {
