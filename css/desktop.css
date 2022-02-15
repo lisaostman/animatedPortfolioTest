@@ -237,6 +237,8 @@ td {
 
 .submitForm {
   display: inline-block;
+  border: rgb(58, 221, 178) 2px solid;
+  border-radius: 4px;
 }
 
 /* nav */
